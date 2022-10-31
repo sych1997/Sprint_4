@@ -1,6 +1,7 @@
 package ru.yandex.scooter;
 
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -48,11 +49,14 @@ public class OrderTest {
                 {1, "Руслан", "Белый", "Москва", "Кузь", "81119231122", "12.12", 7, "черный и серый", "Безнал" },
         };
     }
+    @Before
+    public void beginning (){
+        //driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+    }
 
     @Test
     public void testСheckout() {
-        //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
         HomePage homePage = new HomePage(driver);
         OrderPage orderPage = new OrderPage(driver);
 

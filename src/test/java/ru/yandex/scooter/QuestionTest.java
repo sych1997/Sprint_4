@@ -1,6 +1,7 @@
 package ru.yandex.scooter;
 
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -35,11 +36,14 @@ public class QuestionTest {
                 {8, "Да, обязательно. Всем самокатов! И Москве, и Московской области." },
         };
     }
+    @Before
+    public void beginning (){
+        //driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+    }
 
     @Test
     public void testQuestion() {
-        //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
         HomePage homePage = new HomePage(driver);
 
         homePage.openMainPage();
