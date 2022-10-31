@@ -51,7 +51,7 @@ public class OrderTest {
     }
     @Before
     public void beginning (){
-        //driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();;
         driver = new ChromeDriver();
     }
 
